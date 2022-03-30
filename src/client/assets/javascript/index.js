@@ -93,7 +93,7 @@ async function handleCreateRace() {
 			store.race_id = race.ID - 1
 
 			// render starting UI
-			renderAt('#race', renderRaceStartView())
+			renderAt('#race', renderRaceStartView(race.Track, race.Cars))
 
 			// !The race has been created, now start the countdown
 			// call the async function runCountdown
